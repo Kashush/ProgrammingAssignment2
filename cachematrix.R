@@ -1,9 +1,9 @@
 ## The following functions use a memory cache to store the input and inverse 
-## matrix. cacheSolve tries to find the saved inverse matrix before calculating
-## one. 
+## matrices. cacheSolve tries to find the saved inverse matrix before
+## calculating one. 
 
-## Creates a list the contains functions for getting and setting values in a
-## vector and setting and getting the inverse of a vector
+## Creates a list that contains functions for getting and setting values in the
+## input matrix and setting and getting the inverse of the input matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
     ## xInv is the inverse matrix.
@@ -31,7 +31,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## casheSolve returns either the saved (cached) or calcualted inverse matrix.
+## casheSolve returns the saved (cached) inverse matrix. If there is none then 
+## it calcualtes the inverse matrix, saves it in the cache and returns it.
 
 cacheSolve <- function(x, ...) {
     ## Retrieves the inverse matrix in the cache.
